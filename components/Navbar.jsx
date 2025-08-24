@@ -5,7 +5,7 @@ import profile from "../src/assets/profile.jpg";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { FaBell, FaGraduationCap, FaChevronDown, FaUser, FaCog, FaSignOutAlt } from "react-icons/fa";
 
-const Navbar = ({ onToggleSidebar, sidebarOpen }) => {
+const Navbar = ({ onToggleSidebar }) => {
   const [profileDropdownOpen, setProfileDropdownOpen] = useState(false);
   const profileRef = useRef(null);
 

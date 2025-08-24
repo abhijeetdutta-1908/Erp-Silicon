@@ -31,7 +31,9 @@ const Dashboard = () => {
       <div className="dashboard-main">
         <Sidebar isOpen={sidebarOpen} />
         <div className={`dashboard-content ${!sidebarOpen ? 'sidebar-closed' : ''}`}>
-          <h2 className="page-title">Dashboard</h2>
+          <div className="page-title">
+            <span >Dashboard</span>
+          </div>
           <div className="card-grid">
             {cards.map((card, index) => (
               <div key={index} className={`card ${card.color}`}>
