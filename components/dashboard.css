@@ -1,0 +1,94 @@
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.dashboard-container .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1001;
+}
+
+.dashboard-main {
+  display: flex;
+  flex: 1;
+  margin-top: 45px; /* Account for fixed navbar height */
+}
+
+.dashboard-content {
+  flex: 1;
+  padding: 20px;
+  background: #f4f6f9;
+  overflow-y: auto;
+  margin-left: 198px; /* Account for sidebar width */
+  transition: margin-left 0.3s ease;
+  min-height: calc(100vh - 45px); /* Ensure full height minus navbar */
+}
+
+.dashboard-content.sidebar-closed {
+  margin-left: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .dashboard-content {
+    margin-left: 0;
+    padding: 15px;
+  }
+  
+  .dashboard-content.sidebar-closed {
+    margin-left: 0;
+  }
+}
+
+.page-title {
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #333;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.card {
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Card Colors */
+.card-red {
+  background: #f87171;
+}
+.card-blue {
+  background: #60a5fa;
+}
+.card-orange {
+  background: #fbbf24;
+  color: #222;
+}
+.card-purple {
+  background: #a78bfa;
+}
+.card-darkblue {
+  background: #2563eb;
+}
+.card-pink {
+  background: #f472b6;
+}
+.card-green {
+  background: #34d399;
+}
